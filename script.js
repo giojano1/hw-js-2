@@ -6,31 +6,21 @@ let answer;
 switch (mainQuest) {
   case "1":
     question = prompt(`რა არის რა არის typeof(5)`);
-    if (
-      question === `number` ||
-      question === "NUMBER" ||
-      question === "NumBer"
-    ) {
-      alert(`სწორი პასუხია`);
-    } else {
-      alert(`არასწორი პასუხია`);
-    }
+    answer = "number";
     break;
   case "2":
     question = prompt(`შეიძლება თუ არა let-ის რედეკლალირება`);
-    if (question === `Yes` || question === "yes" || question === "YeS") {
-      alert(`სწორი პასუხია`);
-    } else {
-      alert(`არასწორი პასუხია`);
-    }
+    answer = "yes" || "YES" || "YeS";
     break;
   case "3":
     question = prompt(`რას აბრუნებს console.log(Math.floor(2.1))`);
-    if (question === `ori` || question === "ORI" || question === "oRi") {
-      alert(`სწორი პასუხია`);
-    } else {
-      alert(`არასწორი პასუხია`);
-    }
+    answer = "ori" || "ORI" || "oRi";
     break;
   default:
+    alert("not found");
+}
+if (question === answer.toLowerCase()) {
+  alert("სწორი პასუხია");
+} else {
+  alert("არასწორი პასუხია");
 }
